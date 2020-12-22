@@ -18,10 +18,15 @@ export default {
       }
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime'
+    },
+    {
+      name: 'notes',
+      type: 'text',
+      title: 'Notes',
+      description: 'Just for my own purposes and not published'
     },
     {
       name: 'mainImage',
@@ -32,15 +37,59 @@ export default {
       }
     },
     {
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true
+          }
+        }
+      ]
+    },
+    {
+      name: 'excerpt',
+      type: 'excerptPortableText',
+      title: 'Excerpt',
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.'
+    },
+    {
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: {type: 'author'}
+    },
+    {
+      name: 'authors',
+      title: 'Authors',
+      type: 'array',
+      of: [
+        {
+          type: 'authorReference'
+        }
+      ]
+    },
+    {
       name: 'categories',
       title: 'Categories',
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}]
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
+      title: 'Tags',
+      name: 'tags',
+      type: 'array',
+      of: [
+        {
+          type: 'string'
+        }
+      ],
+      options: {
+        layout: 'tags'
+      }
     },
     {
       name: 'body',
