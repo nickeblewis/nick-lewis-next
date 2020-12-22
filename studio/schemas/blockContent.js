@@ -49,7 +49,8 @@ export default {
             ]
           }
         ]
-      }
+      },
+      of: [{type: 'authorReference'}]
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
@@ -57,6 +58,13 @@ export default {
     {
       type: 'image',
       options: {hotspot: true}
+    },
+    {
+      type: 'mainImage',
+      options: {hotspot: true}
+    },
+    {
+      type: 'youtube'
     }
   ]
 }

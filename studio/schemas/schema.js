@@ -14,6 +14,7 @@ import comment from './comment'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import youtube from './objects/youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,6 +34,7 @@ export default createSchema({
     comment,
     excerptPortableText,
     mainImage,
-    authorReference
+    authorReference,
+    youtube
   ])
 })
